@@ -16,7 +16,7 @@ export default function Index() {
         loading: moviesLoading,
         error: moviesError
     } = useFetch(() => fetchMovies({
-        query: ''
+        query: ""
     }));
 
     return (
@@ -38,6 +38,10 @@ export default function Index() {
                         <SearchBar
                             onPress={() => router.push('/search')}
                             placeholder="Search for a movie"
+                            value=""
+                            onChangeText={() =>
+                                console.log("Search for a movie")
+                            }
                         />
 
                         <>
